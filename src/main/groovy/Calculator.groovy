@@ -49,6 +49,7 @@ class Calculator {
     }
 
     private static BigInteger addingNumbersInStorage(Stack<BigInteger> storageNumbers) {
+
         LOGGER.info(() -> "method adding number was called")
         def printingResult = { param -> println("the result is : ${param}") }
         BigInteger result = 0
@@ -57,6 +58,7 @@ class Calculator {
             result += pop
             LOGGER.info(() -> "the current sum is " + result)
         }
+
         printingResult.call(result)
         LOGGER.info(() -> "the result is " + result)
         return result
